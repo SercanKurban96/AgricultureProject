@@ -1,0 +1,24 @@
+﻿@using AgricultureProject.EntityLayer.Concrete
+@model List<Service>
+
+<div class="sevices-w3layouts" id="services">
+    <div class="container">
+        <h3 class="tittle">Hizmetlerimiz</h3>
+        <p class="heading-btm-w3ls">4 farklı hizmet türü ile sizlere ulaşmaya devam ediyoruz.</p>
+        <div class="services-main">
+            @foreach (var item in Model)
+            {                        
+            <div class="@item.ServiceClass1" data-wow-delay=".5s">
+                <h5>@item.ServiceTitle</h5>
+                <p>@item.ServiceDescription</p>
+
+                <div class="@item.ServiceClass2">
+                    <i class="@item.ServiceImageUrl" aria-hidden="true"></i>
+                    <p>@item.ServiceTitle</p>
+                </div>
+            </div>
+            }
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
